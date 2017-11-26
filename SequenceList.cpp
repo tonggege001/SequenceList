@@ -91,8 +91,8 @@ int ListLength(const SqList * L){
  */
 Status GetElem(const SqList *  L, int i, ElemType * e){
     if(!L) return ERROR;
-    if(L->listsize <= 0) exit(ERROR); //判断线性表是否存在
-    if(i> ListLength(L)) exit(ERROR); //判断是否为空表
+    if(L->listsize <= 0) return(ERROR); //判断线性表是否存在
+    if(i> ListLength(L)) return (ERROR); //判断是否为空表
     ElemType * List = L->elem;  //获取基地址
     *e = List[i-1]; //线性表获取元素的时间的复杂度是常数O(1)
     return OK;
@@ -138,7 +138,7 @@ Status PriorElem(const SqList * L, ElemType cur_e, ElemType * pre_e){
     if(compare(List[0],cur_e)==0) return (ERROR); //如果该元素是第一个元素,则返回错误码
     int flag = FALSE;   //判断当前是否查找到
     for(int i = 0;i<ListLength(L) && flag !=TRUE;i++){
-        if(compare(List[i],cur_e)){
+        if(compare(List[i],cur_e)==0){
             flag = TRUE;    //找到标志
             if(pre_e!=NULL) *pre_e = List[i-1];
         }

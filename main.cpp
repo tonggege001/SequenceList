@@ -19,8 +19,8 @@ int Input(ElemType *e){
     printf("请输入f:\n");scanf("%f",&e->f);
 }
 int Output(ElemType e){
-    printf("C的值为%c",e.c);
-    printf("D的值为%d",e.d);
+    printf("C的值为%c,",e.c);
+    printf("D的值为%d,",e.d);
     printf("F的值为%f",e.f);
 }
 
@@ -30,6 +30,7 @@ int main(void){
     SqList * L = NULL;  int op=1;
     int index;current = 1;
     ElemType e;
+    ElemType e2;
     while(op){
       //  system("cls");
         printf("\n\n");
@@ -74,7 +75,7 @@ int main(void){
             case 6:
                 printf("\n请输入元素位序\n");scanf("%d",&index);
                 getchar();
-                if(!GetElem(L,index,&e)){
+                if(GetElem(L,index,&e)){
                     Output(e);
                 }
                 else printf("错误！");
@@ -88,16 +89,16 @@ int main(void){
                 break;
             case 8:
                 printf("请输入节点值：\n");Input(&e);
-                if(PriorElem(L,e,&e)!= ERROR){
-                    Output(e);
+                if(PriorElem(L,e,&e2)!= ERROR){
+                    Output(e2);
                 }
                 else printf("\n错误\n");
                 getchar();getchar();
                 break;
             case 9:
                 printf("请输入节点值：\n");Input(&e);
-                if(NextElem(L,e,&e)!= ERROR){
-                    Output(e);
+                if(NextElem(L,e,&e2)!= ERROR){
+                    Output(e2);
                 }
                 else printf("\n输入错误\n");
                 getchar();getchar();

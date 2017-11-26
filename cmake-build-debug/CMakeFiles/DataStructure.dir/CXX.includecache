@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+E:/C_WORKPLACE/DataStructure/SequenceList.cpp
+SequenceList.h
+E:/C_WORKPLACE/DataStructure/SequenceList.h
+stdlib.h
+-
+stdio.h
+-
+
+E:/C_WORKPLACE/DataStructure/SequenceList.h
+stdlib.h
+-
+
+E:/C_WORKPLACE/DataStructure/main.cpp
+stdio.h
+-
+SequenceList.h
+E:/C_WORKPLACE/DataStructure/SequenceList.h
+
+E:/C_WORKPLACE/DataStructure/main_.cpp
+stdio.h
+-
+SequenceList.h
+E:/C_WORKPLACE/DataStructure/SequenceList.h
+
